@@ -43,3 +43,23 @@ set the option to a new value. Only full line comments are supported.
 
 You can specify the chars to detect a commented line at construction
 time, see above. The default value is '#;'.
+
+## Shell based alternative
+
+If you need to manage configuration files at a lower level e.g. to
+modify the .env file the following script could be of use to you.
+You can find the awk programme file in contrib/awk.
+
+    #!/bin/bash
+
+    declare -A env
+
+    env[APP_ENV]="testing"
+    env[APP_URL]="myapp"
+    env[DB_DATABASE]="db"
+
+    for key in ${!env[@]}; do
+        awk -f contrib/awk/set-option-to-value -v option=${key} \
+	    -v value=${env[${key}]} .env > .env.tmp
+        mv .env.tmp .env
+    done
