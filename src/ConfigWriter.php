@@ -3,21 +3,21 @@
 namespace ConfigWriter;
 
 /**
- * Class IniWriter
+ * Class ConfigWriter
  *
- * @package IniWriter
+ * @package ConfigWriter
  *
- * Config the sentry integration
+ * Allow to easily modify or create configuration files.
  */
 class ConfigWriter
 {
     /**
-     * IniWriter constructor.
+     * ConfigWriter constructor.
      *
-     * @param string $filename
-     * @param array  $options
-     * @param string $delimeter
-     * @param string $comment
+     * @param string $filename  The path to the config file
+     * @param array  $options   The nested array of options (optionally)
+     * @param string $delimeter The delimiter of the key value pair (optionally). Defaults to '='
+     * @param string $comment   The chars to detect comments (optionally). Defaults to '#;'
      */
     public function __construct(
         string $filename,
@@ -32,15 +32,13 @@ class ConfigWriter
     }
 
     /**
-     * Set the options and write the INI file.
+     * Apply the configuration changes.
      *
      * Returns true if the file had to be modified.
      *
-     * @param array $options
+     * @param array $options    The nested array of options (optionally)
      *
      * @return bool
-     *
-     * @throws FileNotFoundException
      */
     public function write(array $options = [])
     {
