@@ -1,0 +1,6 @@
+vendor/
+*.cache
+# Temporary vim files
+*.swp
+*.swn
+*.swo

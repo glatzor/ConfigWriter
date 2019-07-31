@@ -1,0 +1,33 @@
+{
+    "name": "julit/configwriter",
+    "description": "Write to configuration files",
+    "type": "library",
+    "keywords": [
+        "ini",
+        "config"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian Heinlein",
+            "email": "devel@glatzor.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2.0",
+        "squizlabs/php_codesniffer": "^3.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConfigWriter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

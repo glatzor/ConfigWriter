@@ -1,0 +1,21 @@
+# Unifed coding styles for different editors and IDEs
+# http://editorconfig.org
+
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{php,vue,ts}]
+indent_style = space
+indent_size = 4
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.{less,sh}]
+indent_style = tab
