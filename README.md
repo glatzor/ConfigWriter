@@ -1,7 +1,10 @@
 # ConfigWriter
 
-ConfigWriter allows you to modify or create config files easily.
-It was written to change templates e.g. '.env.example'.
+ConfigWriter is a PHP library which allows you to modify or
+create config files easily.
+It was written to change templates e.g. '.env.example' and to
+keep the formatting and order of the original file as far as
+possible.
 
 ## Usage
 
