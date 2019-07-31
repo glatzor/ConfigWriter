@@ -63,6 +63,6 @@ You can find the awk programme file in contrib/awk.
 
     for key in ${!env[@]}; do
         awk -f contrib/awk/set-option-to-value -v option=${key} \
-	    -v value=${env[${key}]} .env > .env.tmp
+            -v value=${env[${key}]} .env > .env.tmp
         mv .env.tmp .env
     done
